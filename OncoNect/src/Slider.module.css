@@ -1,36 +1,63 @@
-.sliding {
+#sliderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+  width: 100%;
+  max-width: 1200px;
+}
+#sliderContainer label {
+  font-size: 2rem;
+}
+#sliderContainer .sliding {
   outline: 0;
   border: 0;
   border-radius: 500px;
-  width: 800px;
-  max-width: 100%;
-  margin: 24px 0 16px;
+  width: 98%;
+  margin: 2%;
   transition: box-shadow 0.2s ease-in-out;
 }
-.sliding {
+#sliderContainer .sliding {
   overflow: hidden;
   height: 80px;
   -webkit-appearance: none;
   background-color: #ddd;
 }
-.sliding::-webkit-slider-runnable-track {
+#sliderContainer .sliding::-webkit-slider-runnable-track {
   height: 80px;
   -webkit-appearance: none;
   color: #444;
   -webkit-transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
 }
-.sliding::-webkit-slider-thumb {
+#sliderContainer .sliding::-webkit-slider-thumb {
   width: 80px;
   -webkit-appearance: none;
   height: 80px;
   cursor: ew-resize;
-  background: url("http://iconizer.net/files/Duesseldorf/orig/heart.png") center/50% no-repeat, blue;
-  border-radius: 50%;
+  box-shadow: -50vw 0 0 48vw hsl(150, 50%, 35%), inset 0 0 0 40px hsla(150, 50%, 35%, 0.2);
+  border-radius: 100%;
   -webkit-transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
   position: relative;
+  transform: scale(110%);
+  z-index: 100;
 }
-.sliding:active::-webkit-slider-thumb {
-  background: url("http://iconizer.net/files/Duesseldorf/orig/heart.png") center/contain no-repeat, blue;
+#sliderContainer #headhache::-webkit-slider-thumb {
+  background: url("../src/assets/mal-de-crane.png") center/50% no-repeat;
+}
+#sliderContainer #headhache:hover::-webkit-slider-thumb {
+  background-size: 62%;
+}
+#sliderContainer #breathless::-webkit-slider-thumb {
+  background: url("../src/assets/poumon.png") center/50% no-repeat;
+}
+#sliderContainer #breathless:hover::-webkit-slider-thumb {
+  background-size: 62%;
+}
+#sliderContainer #appetite::-webkit-slider-thumb {
+  background: url("../src/assets/faim.png") center/50% no-repeat;
+}
+#sliderContainer #appetite:hover::-webkit-slider-thumb {
+  background-size: 62%;
 }/*# sourceMappingURL=Slider.module.css.map */

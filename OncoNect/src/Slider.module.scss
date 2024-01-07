@@ -1,43 +1,71 @@
-.sliding {
-  outline: 0;
-  border: 0;
-  border-radius: 500px;
-  width: 800px;
-  max-width: 100%;
-  margin: 24px 0 16px;
-  transition: box-shadow 0.2s ease-in-out;
-  & {
-    overflow: hidden;
-    height: 80px;
-    -webkit-appearance: none;
-    background-color: #ddd;
+#sliderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+  width: 100%;
+  max-width: 1200px;
+
+  label {
+    font-size: 2rem;
   }
-  &::-webkit-slider-runnable-track {
-    height: 80px;
-    -webkit-appearance: none;
-    color: #444;
-    // margin-top: -1px;
+
+  .sliding {
+    outline: 0;
+    border: 0;
+    border-radius: 500px;
+    width: 98%;
+    margin: 2%;
     transition: box-shadow 0.2s ease-in-out;
+    & {
+      overflow: hidden;
+      height: 80px;
+      -webkit-appearance: none;
+      background-color: #ddd;
+    }
+    &::-webkit-slider-runnable-track {
+      height: 80px;
+      -webkit-appearance: none;
+      color: #444;
+      // margin-top: -1px;
+      transition: box-shadow 0.2s ease-in-out;
+    }
+    &::-webkit-slider-thumb {
+      width: 80px;
+      -webkit-appearance: none;
+      height: 80px;
+      cursor: ew-resize;
+      box-shadow: -50vw 0 0 48vw hsl(150, 50%, 35%),
+        inset 0 0 0 40px hsla(150, 50%, 35%, 0.2);
+      border-radius: 100%;
+      transition: box-shadow 0.2s ease-in-out;
+      position: relative;
+      transform: scale(110%);
+      z-index: 100;
+    }
   }
-  &::-webkit-slider-thumb {
-    width: 80px;
-    -webkit-appearance: none;
-    height: 80px;
-    cursor: ew-resize;
-    //box-shadow: -400px 0 0 360px #1597ff, inset 0 0 0 40px #1597ff;
-    border-radius: 50%;
-    transition: box-shadow 0.2s ease-in-out;
-    position: relative;
-    // top: 1px;
+
+  #headhache::-webkit-slider-thumb {
+    background: url("../src/assets/mal-de-crane.png") center / 50% no-repeat;
   }
-  &:active::-webkit-slider-thumb {
-    background: url("http://iconizer.net/files/Duesseldorf/orig/heart.png")
-        center / contain no-repeat,
-      blue;
-    //box-shadow: -400px 0 0 360px #1597ff, inset 0 0 0 3px #1597ff;
+
+  #headhache:hover::-webkit-slider-thumb {
+    background-size: 62%;
   }
-  &::-webkit-slider-thumb {
-  background: url("http://iconizer.net/files/Duesseldorf/orig/heart.png")
-        center / 50% no-repeat,
-      blue;
+
+  #breathless::-webkit-slider-thumb {
+    background: url("../src/assets/poumon.png") center / 50% no-repeat;
+  }
+
+  #breathless:hover::-webkit-slider-thumb {
+    background-size: 62%;
+  }
+
+  #appetite::-webkit-slider-thumb {
+    background: url("../src/assets/faim.png") center / 50% no-repeat;
+  }
+
+  #appetite:hover::-webkit-slider-thumb {
+    background-size: 62%;
+  }
 }
