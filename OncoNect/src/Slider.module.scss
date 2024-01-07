@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin: 5%;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
 
   label {
@@ -14,7 +14,7 @@
     outline: 0;
     border: 0;
     border-radius: 500px;
-    width: 98%;
+    width: 96%;
     margin: 2%;
     transition: box-shadow 0.2s ease-in-out;
     & {
@@ -45,6 +45,12 @@
     }
   }
 
+  #symptomeQuantification {
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+
   #headhache::-webkit-slider-thumb {
     background: url("../src/assets/mal-de-crane.png") center / 50% no-repeat;
   }
@@ -67,5 +73,24 @@
 
   #appetite:hover::-webkit-slider-thumb {
     background-size: 62%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    label {
+      font-size: 1.2rem;
+    }
+
+    .sliding::-webkit-slider-thumb {
+      width: 80px;
+      -webkit-appearance: none;
+      height: 80px;
+      cursor: ew-resize;
+      box-shadow: -50vw 0 0 44vw hsl(150, 50%, 35%),
+        inset 0 0 0 40px hsla(150, 50%, 35%, 0.2);
+    }
+
+    #symptomeQuantification > h2 {
+      font-size: 3vw;
+    }
   }
 }

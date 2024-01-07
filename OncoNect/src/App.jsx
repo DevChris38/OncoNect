@@ -3,21 +3,18 @@ import Slider from "./Slider";
 
 function App() {
   return (
-    <>
+    <div id={styles.appContainer}>
       <header>
         <h1>Recrutement stage OncoNect</h1>
       </header>
       <main>
-        <h2>
-          Sur une échelle de 0 à 10 quel est votre ressenti à propos des
-          symptomes suivants ?
-        </h2>
-        <Slider title="Maux de tête" name="headhache" />
-        <Slider title="Difficultés à respirer" name="breathless" />
-        <Slider title="Perte d'appétit" name="appetite" />
+        <h2>Quel est votre ressenti à propos des symptomes suivants ?</h2>
+        <Slider title="maux de tête" name="headhache" />
+        <Slider title="difficultés à respirer" name="breathless" />
+        <Slider title="perte d'appétit" name="appetite" />
       </main>
       <footer>Christopher Arthaud - 2024</footer>
-    </>
+    </div>
   );
 }
 
