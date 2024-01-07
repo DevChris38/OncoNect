@@ -1,8 +1,7 @@
 import { useState } from "react";
+import Slider from "./Slider";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <header>
